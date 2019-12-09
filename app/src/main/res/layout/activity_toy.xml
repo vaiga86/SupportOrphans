@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/toys" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorBlue"
+            android:text="ADD TOYS"
+            android:textSize="50dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type of Toy:" />
+
+            <EditText
+                android:id="@+id/foodId"
+                android:layout_width="309dp"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="166dp"
+                android:layout_height="50dp"
+                android:text="Quantity" />
+
+            <EditText
+                android:layout_width="234dp"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="New" />
+
+            <CheckBox
+                android:id="@+id/usedtoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y" />
+
+            <CheckBox
+                android:id="@+id/unusedtoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/addtoy"
+            android:layout_width="128dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:text="ADD" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
