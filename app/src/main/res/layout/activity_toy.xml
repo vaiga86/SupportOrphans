@@ -83,7 +83,9 @@
                 android:id="@+id/unusedtoy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="N" />
+                android:text="N"
+
+                android:textSize="10dp" />
         </LinearLayout>
 
 
