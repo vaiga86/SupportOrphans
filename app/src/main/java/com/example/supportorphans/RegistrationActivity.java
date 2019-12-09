@@ -25,7 +25,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //System.out.println("Button Clicked");
 
-                Intent activity4Intent = new Intent(getApplicationContext(), ItemsActivity.class);
+                Intent activity4Intent = new Intent(getApplicationContext(), ItemsAdminActivity.class);
                 startActivity(activity4Intent);
 
             }

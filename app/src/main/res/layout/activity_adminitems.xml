@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<LinearLayout
+android:layout_height="wrap_content"
+android:layout_width="wrap_content">
+
+<ImageView
+    android:layout_gravity="fill_horizontal"
+    android:layout_height="150dp"
+    android:layout_width="match_parent"
+    android:src="@drawable/charity"></ImageView>
+</LinearLayout>
+
+<LinearLayout
+android:layout_height="wrap_content"
+android:layout_width="match_parent">
+
+<TextView
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="WELCOME"
+    android:textAlignment="center"
+    android:textColor="@color/colorPrimary" />
+</LinearLayout>
+
+<RelativeLayout
+android:layout_height="wrap_content"
+android:layout_width="wrap_content"
+android:orientation="horizontal">
+<Button
+    android:background="@color/colorAccent"
+    android:id="@+id/button0"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="Register" />
+
+
+<Button
+    android:background="@color/colorSaffron"
+    android:id="@+id/button1"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="Clothes" />
+
+<Button
+    android:background="@color/colorBlue"
+    android:id="@+id/button2"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="Food" />
+
+<Button
+    android:background="@color/colorGreen"
+    android:id="@+id/button3"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="Toys" />
+
+<Button
+    android:background="@color/colorSaffron"
+    android:id="@+id/button4"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="Donated" />
+
+</RelativeLayout><ImageView
+android:layout_height="wrap_content"
+android:layout_width="match_parent"
+android:src="@drawable/logo" /></LinearLayout>

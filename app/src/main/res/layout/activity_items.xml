@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="ADD ITEMS"
+            android:text="DONATE ITEMS"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary" />
     </LinearLayout>
