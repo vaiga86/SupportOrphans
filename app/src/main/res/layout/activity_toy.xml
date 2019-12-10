@@ -25,9 +25,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/colorBlue"
-            android:text="ADD TOYS"
-            android:textSize="50dp" />
+            android:background="@color/colorWhite"
+            android:text="DONATE TOYS"
+            android:textSize="35dp"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,7 +41,7 @@
                 android:text="Type of Toy:" />
 
             <EditText
-                android:id="@+id/foodId"
+                android:id="@+id/toyId"
                 android:layout_width="309dp"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine" />
@@ -52,12 +53,12 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="166dp"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Quantity" />
 
             <EditText
-                android:layout_width="234dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
 
@@ -69,35 +70,60 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="165dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="New" />
 
-            <CheckBox
-                android:id="@+id/usedtoy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Y" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/unusedtoy"
+                <RadioButton
+                    android:id="@+id/usedtoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Y" />
+
+                <RadioButton
+                    android:id="@+id/unusedtoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N" />
+
+            </RadioGroup>
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="N"
-                android:textSize="10dp" />
+                android:text=" "/>-->
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/addtoy"
-            android:layout_width="128dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="ADD" />
+            <Button
+                android:id="@+id/addtoy"
+                android:layout_width="128dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:text="ADD" />
 
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <Button
+                android:layout_width="128dp"
+                android:layout_height="35dp"
+                android:id="@+id/backtoy"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:text="BACK" />
+        </LinearLayout>
 
     </LinearLayout>
-
-
 </LinearLayout>

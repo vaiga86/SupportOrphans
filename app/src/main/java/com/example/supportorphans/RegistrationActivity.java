@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
+        EditText etName = findViewById(R.id.loginName);
 
         // public void processSigninLinkClick(View view) {
         // Intent intent = new Intent(this, LoginActivity.class);
@@ -25,7 +27,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //System.out.println("Button Clicked");
 
-                Intent activity4Intent = new Intent(getApplicationContext(), ItemsAdminActivity.class);
+                Intent activity4Intent = new Intent(getApplicationContext(), ItemsActivity.class);
                 startActivity(activity4Intent);
 
             }

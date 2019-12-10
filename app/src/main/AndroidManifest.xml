@@ -15,12 +15,16 @@
             </intent-filter>
 
         </activity>
-        <activity android:name="RegistrationActivity"></activity>
-        <activity android:name=".ClothesActivity"></activity>
+        <activity android:name="RegistrationActivity"
+                android:parentActivityName=".LoginActivity"></activity>
+        <activity android:name=".ClothesActivity"
+            android:parentActivityName=".ItemsActivity"></activity>
         <activity android:name=".ItemsActivity"></activity>
-        <activity android:name=".FoodActivity"></activity>
+        <activity android:name=".FoodActivity"
+            android:parentActivityName=".ItemsActivity"></activity>
         <activity android:name=".ItemsAdminActivity"></activity>
-        <activity android:name=".OrphanageActivity"></activity>
+        <activity android:name=".OrphanageActivity"
+            android:parentActivityName=".ItemsAdminActivity"></activity>
         <activity android:name=".ToyActivity"></activity>
     </application>
 </manifest>

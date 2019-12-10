@@ -23,5 +23,15 @@ public class ToyActivity extends AppCompatActivity {
                 startActivity(activity2Intent);
             }
         });
+
+        Button btnty = findViewById(R.id.backtoy);
+        btnty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent actityIntent1 = new Intent(getApplicationContext(), ItemsActivity.class);
+                startActivity(actityIntent1);
+            }
+
+        });
     }
 }

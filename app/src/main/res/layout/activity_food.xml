@@ -62,12 +62,21 @@
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:text="Date of Giving Food" />
-
-            <CalendarView
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:focusable="false"
+            android:singleLine="true"
+            android:autofillHints="Date"
+            />
+            <!--<CalendarView
                 android:id="@+id/adddate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1" />-->
         </LinearLayout>
 
 
