@@ -8,22 +8,30 @@
         android:roundIcon="@drawable/charity"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="LoginActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="RegistrationActivity"
+            android:parentActivityName=".LoginActivity"></activity>
+        <activity android:name=".ItemsActivity"></activity>
+        <activity android:name=".ClothActivity">
 
         </activity>
-        <activity android:name="RegistrationActivity"
-                android:parentActivityName=".LoginActivity"></activity>
-        <activity android:name=".ClothesActivity"
-            android:parentActivityName=".ItemsActivity"></activity>
-        <activity android:name=".ItemsActivity"></activity>
-        <activity android:name=".FoodActivity"
-            android:parentActivityName=".ItemsActivity"></activity>
-        <activity android:name=".ItemsAdminActivity"></activity>
-        <activity android:name=".OrphanageActivity"
+        <activity android:name=".ClothesActivity">
+
+        </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:parentActivityName=".ItemsActivity">
+
+        </activity>
+        <!-- <activity android:name=".ItemsAdminActivity"></activity>-->
+        <activity
+            android:name=".OrphanageActivity"
             android:parentActivityName=".ItemsAdminActivity"></activity>
         <activity android:name=".ToyActivity"></activity>
     </application>

@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ItemsAdminActivity extends AppCompatActivity {
+    private Spinner spinner1;
 
+    //private Button btnSubmit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,7 @@ public class ItemsAdminActivity extends AppCompatActivity {
                 startActivity(activity1Intent);
             }
         });
-        Button buttonOne = findViewById(R.id.button1);
+        Button buttonOne = findViewById(R.id.btncloth);
         buttonOne.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -52,5 +55,9 @@ public class ItemsAdminActivity extends AppCompatActivity {
                 startActivity(activity1Intent);
             }
         });
+        //addItemsOnSpinner2();
+        // addListenerOnButton();
+        // addListenerOnSpinnerItemSelection();
+
     }
 }
