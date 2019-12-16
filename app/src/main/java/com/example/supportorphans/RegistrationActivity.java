@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -62,26 +63,27 @@ public class RegistrationActivity extends AppCompatActivity {
                 registerRequest.setTypeuser(user);
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.48.35/Mocktest/")
+                        .baseUrl("http://192.168.48.35/orphans/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
                 APIService service = retrofit.create(APIService.class);
 
-                Call<RegisterResponse> registerResponse = service.register(registerRequest);
-                registerResponse.enqueue(new Callback<RegisterResponse>() {
+                Call<RegisterResponse> call = service.register(registerRequest);
+                call.enqueue(new Callback<RegisterResponse>() {
                     @Override
-                    public void onResponse(@NonNull Call<RegisterResponse> call, @NonNull Response<RegisterResponse> response) {
+                    public void onResponse(Call<RegisterResponse> call, @NonNull Response<RegisterResponse> response) {
                         if (response.body() != null && response.body().getStatus()) {
+                            Toast.makeText(getApplicationContext(), "API Call success", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
                         }
                     }
 
                     @Override
-                    public void onFailure(@NonNull Call<RegisterResponse> call, Throwable t) {
+                    public void onFailure(Call<RegisterResponse> call, Throwable t) {
                         Log.e("RegisterActivity", t.getMessage().toString());
-                        //Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
                     }
                 });
                 /*final String reg = etRegno.getText().toString();
@@ -98,12 +100,12 @@ public class RegistrationActivity extends AppCompatActivity {
 
                     @Override
                     public void onNothingSelected(AdapterView<?> arg0) {
-                        // 
+                        //
                     }
                 });
 */
 
-              /*  RegisterRequest registerRequest = new RegisterRequest();
+              /* RegisterRequest registerRequest = new RegisterRequest();
                 registerRequest.setuName(username);
                 registerRequest.setuPassword(password);
 
@@ -120,15 +122,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 btn4.setOnClickListener(new View.OnClickListener() {
 
                     public void onClick(View v) {
-                        //System.out.println("Button Clicked");
+                        //System.out.println("Button Clicked");*/
 
-                        Intent activity4Intent = new Intent(getApplicationContext(), ItemsActivity.class);
-                        startActivity(activity4Intent);
-
-                    }
-
-                });*/
             }
+
         });
     }
+
 }

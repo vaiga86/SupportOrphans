@@ -14,8 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="50dp"
         android:text="REGISTRATION"
+        android:layout_marginLeft="55dp"
         android:textColor="@color/colorPrimary"
         android:textSize="15dp" />
 
@@ -96,8 +96,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
+
 
         <TextView
             android:layout_width="51dp"
@@ -121,7 +121,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
         >
 
         <TextView
@@ -141,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp" >
+        >
 
         <TextView
             android:layout_width="73dp"

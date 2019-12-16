@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="fill_horizontal"
-            android:src="@drawable/charity"/>
+            android:src="@drawable/charity" />
     </LinearLayout>
 
     <LinearLayout
@@ -24,13 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="DONATE ITEMS"
+            android:text="DONATE ITEM"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="364dp"
+        android:layout_width="355dp"
         android:layout_height="53dp"
         android:orientation="horizontal">
 
@@ -38,7 +38,6 @@
             android:id="@+id/btncloth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@color/colorSaffron"
             android:text="Clothes" />
 
@@ -46,7 +45,6 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:background="@color/colorBlue"
             android:text="Food" />
 
@@ -58,10 +56,11 @@
             android:text="Toy" />
 
         <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/colorBlue"
-            android:entries="@array/items" />
+            android:id="@+id/orphanage"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:background="#F52B1D"
+            android:entries="@array/orphanagelist" />
     </LinearLayout>
 
     <LinearLayout

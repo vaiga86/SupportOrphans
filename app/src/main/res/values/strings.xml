@@ -9,15 +9,14 @@
     <string name="activity_registration_label_adress">Address</string>
     <string name="activity_registration_label_mobile">Mobile</string>
     <string name="activity_registration_button_name">Register</string>
-    <string-array name="type"><item value="admin">Admin</item>
+    <string-array name="type">
+        <item>Admin</item>
         <item>User</item>
     </string-array>
-    <string-array name="needed">
-    </string-array>
-    <string-array name="items">
-        <item>Clothes</item>
-        <item>Food</item>
-        <item>Toy</item>
+    <string-array name="orphanagelist">
+        <item>Sree Chithra Poor Home</item>
+        <item>Santhwana</item>
+        <item>Snehalayam</item>
     </string-array>
 
     <string name="action_settings">Settings</string>
