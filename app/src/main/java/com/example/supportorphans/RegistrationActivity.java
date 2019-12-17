@@ -39,7 +39,7 @@ public class RegistrationActivity extends AppCompatActivity {
         final EditText etMobile = findViewById(R.id.mobile);
         final EditText etAddress = findViewById(R.id.address);
         final EditText etEmail = findViewById(R.id.email);
-        final EditText etRegno = findViewById(R.id.regno);
+        //final EditText etRegno = findViewById(R.id.regno);
         final Spinner etUser = findViewById(R.id.user);
 
 
@@ -47,23 +47,26 @@ public class RegistrationActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = etName.getText().toString();
+                String name = etName.getText().toString();
                 String password = etPassword.getText().toString();
                 String mobile = etMobile.getText().toString();
                 String address = etAddress.getText().toString();
                 String email = etEmail.getText().toString();
-                String user = etUser.getSelectedItem().toString();
+                String userType = etUser.getSelectedItem().toString();
 
+                Toast toast = Toast.makeText(getApplicationContext(), email, Toast.LENGTH_LONG);
+// to show the toast
+                toast.show();
                 RegisterRequest registerRequest = new RegisterRequest();
-                registerRequest.setName(username);
+                registerRequest.setName(name);
                 registerRequest.setPassword(password);
                 registerRequest.setMobile(mobile);
                 registerRequest.setAddress(address);
                 registerRequest.setEmail(email);
-                registerRequest.setTypeuser(user);
+                registerRequest.setTypeuser(userType);
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.48.35/orphans/")
+                        .baseUrl("http://backtowork.icfoss.qleapbs.com/orphans/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -72,11 +75,12 @@ public class RegistrationActivity extends AppCompatActivity {
                 Call<RegisterResponse> call = service.register(registerRequest);
                 call.enqueue(new Callback<RegisterResponse>() {
                     @Override
-                    public void onResponse(Call<RegisterResponse> call, @NonNull Response<RegisterResponse> response) {
+                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                         if (response.body() != null && response.body().getStatus()) {
                             Toast.makeText(getApplicationContext(), "API Call success", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
+                            finish();
                         }
                     }
 
@@ -86,6 +90,14 @@ public class RegistrationActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
                     }
                 });
+
+/* RegisterRequest registerRequest = new RegisterRequest();
+                registerRequest.setuName(username);
+                registerRequest.setuPassword(password);
+
+                Retrofit retrofit = new Retrofit().newBuilder();
+            }
+        });*/
                 /*final String reg = etRegno.getText().toString();
                 etUser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -103,30 +115,16 @@ public class RegistrationActivity extends AppCompatActivity {
                         //
                     }
                 });
-*/
-
-              /* RegisterRequest registerRequest = new RegisterRequest();
-                registerRequest.setuName(username);
-                registerRequest.setuPassword(password);
-
-                Retrofit retrofit = new Retrofit().newBuilder();
-            }
-        });*/
-
-                // public void processSigninLinkClick(View view) {
-                // Intent intent = new Intent(this, LoginActivity.class);
-                // startActivity(intent);
-                /*Button btn4 = findViewById(R.id.signup);
+                  public void processSigninLinkClick(View view) {
+                 Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
 
 
-                btn4.setOnClickListener(new View.OnClickListener() {
+            }*/
 
-                    public void onClick(View v) {
-                        //System.out.println("Button Clicked");*/
 
             }
 
         });
     }
-
 }

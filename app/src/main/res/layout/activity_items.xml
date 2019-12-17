@@ -56,11 +56,14 @@
             android:text="Toy" />
 
         <Spinner
-            android:id="@+id/orphanage"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:background="#F52B1D"
-            android:entries="@array/orphanagelist" />
+
+            android:id="@+id/spinner"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:outlineSpotShadowColor="@color/colorGreen"
+            android:background="@color/colorPrimary"
+            android:entries="@array/orphanagelist"
+            />
     </LinearLayout>
 
     <LinearLayout

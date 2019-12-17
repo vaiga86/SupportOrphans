@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.supportorphans">
+<uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:allowBackup="true"
@@ -8,11 +10,14 @@
         android:roundIcon="@drawable/charity"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity">
+
         </activity>
         <activity
             android:name="RegistrationActivity"
@@ -31,10 +36,15 @@
             android:parentActivityName=".ItemsActivity">
 
         </activity>
+        <activity android:name=".ItemsAdminActivity">
+
+        </activity>
         <activity android:name=".ItemsViewActivity"></activity>
         <activity
             android:name=".OrphanageActivity"
-            android:parentActivityName=".ItemsAdminActivity"></activity>
+            android:parentActivityName=".ItemsAdminActivity">
+
+        </activity>
         <activity android:name=".ToyActivity"></activity>
-    </application>
+            </application>
 </manifest>

@@ -14,7 +14,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
          }
-     public void processSignupLinkClick(View view){
+     public void processSignup(View view){
          Intent intent = new Intent(  this,RegistrationActivity.class);
          startActivity(intent);
 

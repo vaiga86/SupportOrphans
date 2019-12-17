@@ -40,8 +40,8 @@
                 android:text="Name of Orphanage" />
 
             <EditText
-                android:id="@+id/clothId"
-                android:layout_width="244dp"
+                android:id="@+id/orphanage"
+                android:layout_width="146dp"
                 android:layout_height="match_parent"
                 android:inputType="textMultiLine" />
         </LinearLayout>
@@ -52,17 +52,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reg No:"></TextView>
+                android:text="Reg No:"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
-
+        </LinearLayout>
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -72,13 +72,13 @@
                     android:text="Address:" />
 
                 <EditText
-                    android:id="@+id/age"
-                    android:layout_width="match_parent"
+                    android:id="@+id/address"
+                    android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine" />
             </LinearLayout>
 
-        </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout

@@ -7,12 +7,13 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:src="@drawable/charity"></ImageView>
+            android:src="@drawable/charity"/>
     </LinearLayout>
 
     <LinearLayout
@@ -70,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
-                android:onClick="processSignupLinkClick"
+                android:onClick="processSignup"
                 android:text="@string/activity_login_label_signup"
                 android:textColor="@color/colorPrimaryDark"
                 />

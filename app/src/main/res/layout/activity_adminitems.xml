@@ -65,13 +65,15 @@
             android:background="@color/colorGreen"
             android:text="Toys" />
 
-        <!--<Spinner
+        <Spinner
+
             android:id="@+id/spinner"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/country_arrays"
-            android:prompt="@string/country_prompt"
-             />-->
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:outlineSpotShadowColor="@color/colorGreen"
+            android:background="@color/colorPrimary"
+            android:entries="@array/orphanagelist"
+            />
     </LinearLayout>
 
     <ImageView
