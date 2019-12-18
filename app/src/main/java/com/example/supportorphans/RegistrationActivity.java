@@ -39,7 +39,6 @@ public class RegistrationActivity extends AppCompatActivity {
         final EditText etMobile = findViewById(R.id.mobile);
         final EditText etAddress = findViewById(R.id.address);
         final EditText etEmail = findViewById(R.id.email);
-        //final EditText etRegno = findViewById(R.id.regno);
         final Spinner etUser = findViewById(R.id.user);
 
 
@@ -54,16 +53,14 @@ public class RegistrationActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 String userType = etUser.getSelectedItem().toString();
 
-                Toast toast = Toast.makeText(getApplicationContext(), email, Toast.LENGTH_LONG);
-// to show the toast
-                toast.show();
                 RegisterRequest registerRequest = new RegisterRequest();
                 registerRequest.setName(name);
                 registerRequest.setPassword(password);
-                registerRequest.setMobile(mobile);
-                registerRequest.setAddress(address);
                 registerRequest.setEmail(email);
-                registerRequest.setTypeuser(userType);
+                registerRequest.setUserType(userType);
+                registerRequest.setAddress(address);
+                registerRequest.setMobNo(mobile);
+
 
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl("http://backtowork.icfoss.qleapbs.com/orphans/")
@@ -87,44 +84,16 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<RegisterResponse> call, Throwable t) {
                         Log.e("RegisterActivity", t.getMessage().toString());
-                        Toast.makeText(getApplicationContext(), "API Call Failure", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "API Call Failure" + t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
-
-/* RegisterRequest registerRequest = new RegisterRequest();
-                registerRequest.setuName(username);
-                registerRequest.setuPassword(password);
-
-                Retrofit retrofit = new Retrofit().newBuilder();
-            }
-        });*/
-                /*final String reg = etRegno.getText().toString();
-                etUser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                        if (user=="Admin") {
-                            etRegno.setVisibility(View.VISIBLE);
-
-                        } else {
-                            etRegno.setVisibility(View.INVISIBLE);
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> arg0) {
-                        //
-                    }
-                });
-                  public void processSigninLinkClick(View view) {
-                 Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-
-
-            }*/
-
-
             }
 
         });
+    }
+
+    public void processSigninLinkClick(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }

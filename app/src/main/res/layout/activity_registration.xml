@@ -14,8 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="REGISTRATION"
         android:layout_marginLeft="30dp"
+        android:text="REGISTRATION"
         android:textColor="@color/colorPrimary"
         android:textSize="15dp" />
 
@@ -94,7 +94,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -109,19 +109,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/type" />
-
-        <EditText
-            android:id="@+id/regno"
-            android:layout_width="127dp"
-            android:visibility="invisible"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -136,7 +129,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -152,13 +145,13 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp" >
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/signup"
@@ -173,8 +166,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="1dp">
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
