@@ -154,9 +154,8 @@
             android:textStyle="bold" />
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="100dp"
             android:text="Message"
             android:textColor="@color/colorGreen"
             android:textStyle="bold" />

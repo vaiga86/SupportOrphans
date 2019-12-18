@@ -61,8 +61,17 @@ public class ItemsActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonspin = findViewById(R.id.spinner);
+        buttonspin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent activity2Intent = new Intent(getApplicationContext(), ItemsViewActivity.class);
+                startActivity(activity2Intent);
+                System.out.println("Button Clicked");
+            }
+        });
 
-        final Spinner spinner = (Spinner) findViewById(R.id.spinner);
+       // final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
         // SpinnerAdapter spinnerArrayAdapter;
         /*spinner.setAdapter(spinnerArrayAdapter);

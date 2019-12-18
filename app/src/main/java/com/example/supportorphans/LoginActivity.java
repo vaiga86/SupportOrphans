@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                 LoginRequest loginRequest = new LoginRequest();
                 loginRequest.setName(name);
                 loginRequest.setPassword(password);
-                Toast.makeText(getApplicationContext(), "email", Toast.LENGTH_LONG).show();
+
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl("http://backtowork.icfoss.qleapbs.com/orphans/")
                         .addConverterFactory(GsonConverterFactory.create())
